@@ -28,6 +28,9 @@ insert_final_newline = true
 # More performant logging (via LoggerMessage delegates or source generation)
 dotnet_diagnostic.CA1848.severity = suggestion
 
+# Methods that don't use instance parameters should be marked as static
+dotnet_diagnostic.CA1822.severity = suggestion
+
 # Static holder types should be Static or NotInheritable
 dotnet_diagnostic.CA1052.severity = warning
 

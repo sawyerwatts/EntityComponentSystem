@@ -2,7 +2,19 @@
 
 This repo is a collection of notes and demo projects to understand the Entity Component System (ECS) architecture.
 
-## Notes: The Component Design Pattern
+ECS is an alt to inheritance chains and/or lotsa domains w/in an entity, as well as potentially being a performance
+enhancement.
+
+## Demos
+
+### EquipmentScreen
+
+This demo applies different equipment, statuses, damages, etc to a character. This explores the process of building game
+systems in ECS using an "RPG," which feels like the most intuitive starting place that ECS makes sense.
+
+## Notes
+
+### The Component Design Pattern
 
 This section contains info, quotes, and code from Bob
 Nystrom's [Game Programming Patterns](https://gameprogrammingpatterns.com).
@@ -59,7 +71,7 @@ could be:
 - utilize messaging, like have a messaging container injected into each component so they can send messages to all
   sibling components
 
-## Notes: The Entity-Component-System (ECS) Architecture
+### The Entity-Component-System (ECS) Architecture
 
 This section contains info and quotes from Austin
 Morlan's [A Simple Entity Component System (ECS) [C++]](https://austinmorlan.com/posts/entity_component_system/).
@@ -88,7 +100,7 @@ There are some other parts to the implementation discussed by Morlan:
 5. A system manager, which "is in charge of maintaining a record of registered systems and their signatures"
 6. The coordinator/welcome, which wires up all the managers and mediates this mess
 
-### Applied Example + Value Demo
+#### Applied Example + Value Demo
 
 Here is interesting quote from r/SeniorePlatypus:
 
@@ -111,7 +123,7 @@ Here is interesting quote from r/SeniorePlatypus:
 This details that an adv of ECS over just using Components is that it allows for this runtime registration of systems
 to operate on the same component.
 
-### System Interactions
+#### System Interactions
 
 Here is a quote from r/ajvrgames demonstrating how systems can interact:
 
@@ -125,7 +137,7 @@ Here is a quote from r/ajvrgames demonstrating how systems can interact:
     create an entity with a collision component that references the two colliding entities. You can then handle these
     entities like any other in collision-type-specific systems again.
 
-## Notes: Unity Game Objects
+### Unity Game Objects
 
 Unity's `GameObject` is a Component implementation that reportedly has ECS support as well.
 
