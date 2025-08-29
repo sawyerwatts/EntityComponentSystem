@@ -43,7 +43,7 @@ public class Driver
 {
     private const string Status = "Status Menu";
 
-    private static readonly string[] systems = new[] { Status, };
+    private static readonly string[] Systems = new[] { Status, };
 
     public Task RunAsync(CancellationToken cancellationToken)
     {
@@ -56,7 +56,7 @@ public class Driver
                     .PageSize(10)
                     .MoreChoicesText(
                         "[grey](Move up and down to reveal more choices)[/]")
-                    .AddChoices(systems));
+                    .AddChoices(Systems));
 
             AnsiConsole.WriteLine("Displaying the status menu");
         }

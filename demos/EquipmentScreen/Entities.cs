@@ -18,7 +18,7 @@ public enum Weapon
     Zwiehander,
 }
 
-public enum ArmorSet
+public enum Armor
 {
     Light,
     Medium,
