@@ -15,6 +15,7 @@ namespace EquipmentScreen;
 //              red tearstone
 //              ring of blades
 //          inflict variable damage (respect armor)
+//          attack training dummy (respect weapon+rings)
 //          heal variable health instantly or gradually
 //          apply poison
 //              have variable buildup and decay?
@@ -40,10 +41,26 @@ namespace EquipmentScreen;
 
 public class Driver
 {
+    private const string Status = "Status Menu";
+
+    private static readonly string[] systems = new[] { Status, };
+
     public Task RunAsync(CancellationToken cancellationToken)
     {
-        // TODO: start coding here
-        AnsiConsole.WriteLine("Start coding here");
+        // TODO: swap active character?
+        while (!cancellationToken.IsCancellationRequested)
+        {
+            string choice = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("Choose an action")
+                    .PageSize(10)
+                    .MoreChoicesText(
+                        "[grey](Move up and down to reveal more choices)[/]")
+                    .AddChoices(systems));
+
+            AnsiConsole.WriteLine("Displaying the status menu");
+        }
+
         return Task.CompletedTask;
     }
 
@@ -52,4 +69,3 @@ public class Driver
         builder.Services.AddTransient<Driver>();
     }
 }
-
