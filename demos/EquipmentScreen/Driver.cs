@@ -2,6 +2,9 @@ using Spectre.Console;
 
 namespace EquipmentScreen;
 
+// TODO: health demo
+//      don't forget about the Cursed status!
+
 // TODO: this demo
 //      have a screen to perform various ops (ctl for many chars?)
 //          view stats (raw and w/ modifiers)

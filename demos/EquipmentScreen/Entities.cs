@@ -31,4 +31,5 @@ public enum Ring
     SmallBeingsRing,
     RedTearStoneRing,
     RingOfBlades,
+    DuskCrownRing,
 }
